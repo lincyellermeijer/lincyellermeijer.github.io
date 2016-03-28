@@ -1,0 +1,202 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Portfolio</title>              
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link	rel="stylesheet"	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script scr="localstorage.js"></script>
+        
+<!-- Button click script for hiding/showing the div par. Not a very pretty solution.. -->
+        <script>
+            
+                $(document).ready(function() {
+                $('#button1').on('click', function() {
+                    if ($('#par1').is(':visible')) {
+                        $(this).text('More info');
+                        $('#par1').hide();
+                    } else {
+                        $(this).text("Less info");
+                        $('#par1').show();
+                    }
+                });
+                    
+                $('#button2').on('click', function() {
+                    if ($('#par2').is(':visible')) {
+                        $(this).text('More info');
+                        $('#par2').hide();
+                    } else {
+                        $(this).text("Less info");
+                        $('#par2').show();
+                    }
+                });
+                    
+                $('#button3').on('click', function() {
+                    if ($('#par3').is(':visible')) {
+                        $(this).text('More info');
+                        $('#par3').hide();
+                    } else {
+                        $(this).text("Less info");
+                        $('#par3').show();
+                    }
+                });
+                    
+                $('#button4').on('click', function() {
+                    if ($('#par4').is(':visible')) {
+                        $(this).text('More info');
+                        $('#par4').hide();
+                    } else {
+                        $(this).text("Less info");
+                        $('#par4').show();
+                    }
+                });
+                    
+                $('#button5').on('click', function() {
+                    if ($('#par5').is(':visible')) {
+                        $(this).text('More info');
+                        $('#par5').hide();
+                    } else {
+                        $(this).text("Less info");
+                        $('#par5').show();
+                    }
+                });
+                
+                $('#par1, #par2, #par3, #par4, #par5').hide();
+                $('#button1, #button2, #button3, #button4, #button5').text('More info');
+            });
+        </script>
+
+    </head>
+    <body>
+
+<!-- Header -->
+        
+        <div data-role="page" id="home">
+            
+                        <header data-role="header">
+                <h1>Lincy's Portfolio</h1>
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" data-icon="home">Projects</a></li>
+                        <li><a href="about.html" data-icon="info">About</a></li>
+                        <li><a href="contact.html" data-icon="action">Contact</a></li>
+                        <li><a href="message.html" data-icon="star">Leave a Message</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+<!-- All the information about the project -->
+            
+            <article  data-role="content">
+<ul data-role="listview" data-inset="true" data-theme="portfolio">
+    
+<li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="true"><img src="pictures/dino.png" alt="projectimage" height="110" width="110" align="left">
+<h2>Fasten Your Seatbelts</h2>
+<!-- title of the subject -->
+<ul data-role="listview" data-shadow="true" data-inset="true" data-corners="true">
+<li>
+    <p style="white-space: normal !important;">	
+<!-- normal text goes here -->
+Fasten Your Seatbelts is about designing and creating a simple IT-system. With this project students will come in contact with java and processing. They learn how to convert the wishes of a client into clearly defined requirements and build a IT-system that meets these requirements. </p>
+<button id="button1">Show less info</button>
+                                
+<div id="par1">
+<p style="white-space: normal !important;">
+This was my first project when I started my study at the HvA. I worked together with 6 other students from Game Development to create a game. At first we had to think of 3 different game concepts, but in the end we chose to elaborate on this one, "Prehistoric Defender". This project was in association with Corendon.
+<!-- text that should be hidden or could be goes here -->
+</div>
+</li>
+</ul>
+</li>
+    
+<li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="true"><img src="pictures/sim.png" alt="projectimage" height="110" width="110" align="left">
+<h2>Students in Motion</h2>
+<!-- title of the subject -->
+<ul data-role="listview" data-shadow="true" data-inset="true" data-corners="true">
+<li>
+    <p style="white-space: normal !important;">	
+<!-- normal text goes here -->
+As a propedeuse student from the domain Digitail Media and Creative Industry (DMCI) from the HvA we participated in Student in Motion. The theme was "the new making". We've collaborated with craft entrepreneurs in Amsterdam, to support them with our DMCI-expertise. </p>
+<button id="button2">Show less info</button>
+                                
+<div id="par2">
+<p style="white-space: normal !important;">
+This is a yearly organized project that takes places during one week in February. I participated in this project from 02-02-2015 'till 06-02-2015.
+<!-- text that should be hidden or could be goes here -->
+</div>
+</li>
+</ul>
+</li>
+    
+<li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="true"><img src="pictures/hippie.png" alt="projectimage" height="110" width="110" align="left">
+<h2>Project Agile Development</h2>
+<!-- title of the subject -->
+<ul data-role="listview" data-shadow="true" data-inset="true" data-corners="true">
+<li>
+    <p style="white-space: normal !important;">	
+<!-- normal text goes here -->
+Project Agile Development is about creating a IT-system with a multidisciplinair team. With this project students will learn to work with the Agile Development method 'Scrum'. Futhermore, they learn how to model a system with the use of the modeling language 'UML'. </p>
+<button id="button3">Show less info</button>
+                                
+<div id="par3">
+<p style="white-space: normal !important;">
+<!-- text that should be hidden or could be goes here -->
+    In Project Agile Development I worked together with 5 other students from different ICT studies. We build an app (in the form of a single-page website with multiple views) with HTML, AngularJS, CSS and JavaScript. It was in association with the Waag Society. The app is developed for elderly people recovering from a hip procedure, the goal of the app is to stimulate rapid rehabilitation.
+</div>
+</li>
+</ul>
+</li>
+    
+<li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="true"><img src="pictures/bb.png" alt="projectimage" height="110" width="110" align="left">
+<h2>Project Game Development</h2>
+<!-- title of the subject -->
+<ul data-role="listview" data-shadow="true" data-inset="true" data-corners="true">
+<li>
+    <p style="white-space: normal !important;">	
+<!-- normal text goes here -->
+During  Project Game Development students create a game in teams. All kinds of game genres are permitted, as long as it is for use in the entertainment market. In this project students will create several prototypes in a very short time and need to elaborate on one of these. Students learn to make better game design choices by gameplay tests and reports.</p>
+<button id="button4">Show less info</button>
+                                
+<div id="par4">
+<p style="white-space: normal !important;">
+<!-- text that should be hidden or could be goes here -->
+    In project Game Development I've worked together with 5 Game Development students to create a game. We've participated in 3 gamejams and decided to elaborate 1 of our prototypes into a fully functional game, "Boomerang Boy". We've worked on this project for a half year and developed a very nice indie platformer game in Unity with C#.
+</div>
+</li>
+</ul>
+</li> 
+    
+<li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="true"><img src="pictures/microsoft.png" alt="projectimage" height="110" width="110" align="left">
+<h2>Project Mobile Development</h2>
+<!-- title of the subject -->
+<ul data-role="listview" data-shadow="true" data-inset="true" data-corners="true">
+<li>
+    <p style="white-space: normal !important;">	
+<!-- normal text goes here -->
+During Project Mobile Development students develop one or more mobile applications for an extern client. </p>
+<button id="button5">Show less info</button>
+                                
+<div id="par5">
+<p style="white-space: normal !important;">
+<!-- text that should be hidden or could be goes here -->
+    In project Mobile Development I'm working together with 4 students from different ICT-studies to create an application. This is in association with Microsoft.
+</div>
+</li>
+</ul>
+</li>
+
+</ul>
+</article>
+
+
+            <footer data-role="footer" data-position="fixed">
+                <h4 class="ui-title" role="heading" aria-level="1"> © Lincy Ellermeijer </h4>
+            </footer>
+
+
+</div>
+
+    </body>
+</html>
