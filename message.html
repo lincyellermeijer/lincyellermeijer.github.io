@@ -1,105 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-        <script src="js/localstorage.js"></script>
-        
-        <!-- This is needed to call the function showList everytime the page is reloaded -->
-        <script>
-        $(document).on('pagebeforeshow', '#message', function(event) {
-	       loadPage();
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    <script src="js/localstorage.js"></script>
+
+    <!-- This is needed to call the function showList everytime the page is reloaded -->
+    <script>
+        $(document).on('pagebeforeshow', '#message', function (event) {
+            loadPage();
         });
-    
-        </script>
+    </script>
 
-<style>
-    img.fullscreen {
-        max-height: 100%;
-        max-width: 100%;
-    } 
-</style>        
+    <style>
+        img.fullscreen {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    </style>
 
-    </head>
-    <body>
-        
-        <div data-role="page" id="message">
-            
-            <!-- Header -->
-            
-                <header data-role="header">
-                <h1>Lincy's Portfolio</h1>
-                <nav data-role="navbar">
-                    <ul>
-                        <li><a href="index.html" data-icon="home">Projects</a></li>
-                        <li><a href="about.html" data-icon="info">About</a></li>
-                        <li><a href="contact.html" data-icon="action">Contact</a></li>
-                        <li><a href="message.html" data-icon="star">Leave a Message</a></li>
-                    </ul>
-                </nav>
-            </header>
-            
-            <body>
-            
-            
+</head>
+
+<body>
+
+    <div data-role="page" id="message">
+
+        <!-- Header -->
+
+        <header data-role="header">
+            <h1>Lincy's Portfolio</h1>
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="index.html" data-icon="home">Projects</a></li>
+                    <li><a href="about.html" data-icon="info">About</a></li>
+                    <li><a href="contact.html" data-icon="action">Contact</a></li>
+                    <li><a href="message.html" data-icon="star">Leave a Message</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <body>
+
+
             <!-- Emtpy textfield where you can type your message -->
             <div data-role="content">
-            <input type="text" name="item" placeholder="Type your message.." onchange="add();">
+                <input type="text" name="item" placeholder="Type your message.." onchange="add();">
                 <button id="add">Add your message</button>
-                
+
                 <h3> Messages: </h3>
-                <p><br></p>
-                
-            <!-- List of items in local storage -->
-            
-            <ul id="items" data‐role="listview" data-theme="a" data‐inset="true" data-filter="true" data-filter-placeholder="Search message..." data-icon="delete"></ul>
-               
+                <p>
+                    <br>
+                </p>
+
+                <!-- List of items in local storage -->
+
+                <ul id="items" data‐role="listview" data-theme="a" data‐inset="true" data-filter="true" data-filter-placeholder="Search message..." data-icon="delete"></ul>
+
                 <p> Click on a message to delete it!</p>
-            <button id="delete">Delete all</button>
+                <button id="delete">Delete all</button>
             </div>
-            
-            
+
+
 
             <footer data-role="footer" data-position="fixed">
                 <h4 class="ui-title" role="heading" aria-level="1"> © Lincy Ellermeijer </h4>
             </footer>
 
 
-</div>
-        
-                <script>
-                // script for the add button
-                $('#add').click(function() {
-                    add();
-                });
-                
-                // delete all items
-                $('#delete').click(function(){
-                    if (confirm('Are you sure you want to delete all messages?'))
-                    {
-                        // Clear the list
-	                   deleteAll();
-                    } else {
-                        // Do nothing!
-                    }
-                });
-                    
-                // delete 1 item 
-                $('#items').on('click', 'li', function(e) {
-                    if (confirm('Are you sure you want to delete this?'))
-                    {
-                        $(this).remove();
-                    } else {
-                        // Do nothing!
-                    }
-                    
-                });
-                    
-                </script>
+    </div>
+
+    <script>
+        // script for the add button
+        $('#add').click(function () {
+            add();
+        });
+
+        // delete all items
+        $('#delete').click(function () {
+            if (confirm('Are you sure you want to delete all messages?')) {
+                // Clear the list
+                deleteAll();
+            } else {
+                // Do nothing!
+            }
+        });
+
+        // delete 1 item 
+        $('#items').on('click', 'li', function (e) {
+            if (confirm('Are you sure you want to delete this?')) {
+                $(this).remove();
+            } else {
+                // Do nothing!
+            }
+
+        });
+    </script>
 
     </body>
+
 </html>
