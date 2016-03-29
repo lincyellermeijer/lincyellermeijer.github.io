@@ -4,16 +4,17 @@
         <meta charset="UTF-8">
         <title>Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link	rel="stylesheet"	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script src="localstorage.js"></script>
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+        <script src="js/localstorage.js"></script>
         
         <!-- This is needed to call the function showList everytime the page is reloaded -->
         <script>
         $(document).on('pagebeforeshow', '#message', function(event) {
-	       updateObject();
+	       loadPage();
         });
+    
         </script>
 
 <style>
@@ -42,8 +43,10 @@
                 </nav>
             </header>
             
+            <body>
+            
+            
             <!-- Emtpy textfield where you can type your message -->
-
             <div data-role="content">
             <input type="text" name="item" placeholder="Type your message.." onchange="add();">
                 <button id="add">Add your message</button>
@@ -53,11 +56,13 @@
                 
             <!-- List of items in local storage -->
             
-            <ul id="items" data‐role="listview" data‐inset="true"></ul> <br>
+            <ul id="items" data‐role="listview" data-theme="a" data‐inset="true" data-filter="true" data-filter-placeholder="Search message..." data-icon="delete"></ul>
                
-                <h4> Click on a message to delete it!</h4>
+                <p> Click on a message to delete it!</p>
             <button id="delete">Delete all</button>
             </div>
+            
+            
 
             <footer data-role="footer" data-position="fixed">
                 <h4 class="ui-title" role="heading" aria-level="1"> © Lincy Ellermeijer </h4>
@@ -74,14 +79,26 @@
                 
                 // delete all items
                 $('#delete').click(function(){
-                // Clear the list
-	               deleteAll();
+                    if (confirm('Are you sure you want to delete all messages?'))
+                    {
+                        // Clear the list
+	                   deleteAll();
+                    } else {
+                        // Do nothing!
+                    }
                 });
                     
-                // delete 1 item    
+                // delete 1 item 
                 $('#items').on('click', 'li', function(e) {
-                    $(this).remove();
-                }); 
+                    if (confirm('Are you sure you want to delete this?'))
+                    {
+                        $(this).remove();
+                    } else {
+                        // Do nothing!
+                    }
+                    
+                });
+                    
                 </script>
 
     </body>

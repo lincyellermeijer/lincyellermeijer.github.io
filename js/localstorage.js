@@ -1,3 +1,21 @@
+function loadPage(){
+	// Fetch the existing objects
+	objects = getObjects();
+
+	// Clear the list
+	$('#items').find('li').remove();
+
+	// Add every object to the objects list
+	$.each(objects, function(index, item){
+		element = '<li>'+item.title+'</li>';
+		
+		$('#items').append(element);
+	});
+  
+   $('#items').listview();
+   $('#items').listview("refresh");
+}
+
 // CREATE
 
 function add(){
@@ -37,23 +55,7 @@ function saveObjects(objects){
 
 // UPDATE
 
-function updateObject(){
-	// Fetch the existing objects
-	objects = getObjects();
 
-	// Clear the list
-	$('#items').find('li').remove();
-
-	// Add every object to the objects list
-	$.each(objects, function(index, item){
-		element = '<li>'+item.title+'</li>';
-		
-		$('#items').append(element);
-	});
-  
-   $('#items').listview();
-   $('#items').listview("refresh");
-}
 
 // DELETE
 
