@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-    <script src="js/localstorage.js"></script>
 
     <style>
         img.fullscreen {
@@ -21,7 +20,7 @@
 
 <body>
 
-    <div data-role="page" id="message">
+    <div data-role="page" id="detail">
 
         <!-- Header -->
 
@@ -37,31 +36,29 @@
             </nav>
         </header>
 
-        <!-- Emtpy textfield where you can type your message -->
         <div data-role="content">
-            <input type="text" name="item" placeholder="Type your message.." onchange="add();">
-            <button onclick="add();" data-icon="plus">Add your message</button>
 
-            <h3> Messages: </h3>
-            <p>
-                <br>
-            </p>
+            <h1>Details</h1>
 
-            <!-- List of items in local storage -->
+            <p><strong>Message: </strong></p>
+            <p class="detailTitle"></p>
 
-            <ul id="items" data‐role="listview" data-theme="a" data‐inset="true" data-filter="true" data-filter-placeholder="Search message..."></ul>
-            <p>
-                <br>
-            </p>
-            <button onclick="deleteAll()" data-icon="delete">Delete all</button>
+            <input type="text" name="itemUpdate" placeholder="Update your message.." onchange="update();">
+
+            <button onclick="update()" data-icon="edit">Update</button>
+            <button onclick="deleteThis()" data-icon="delete">Delete</button>
+
         </div>
-
 
         <footer data-role="footer" data-position="fixed">
             <h4 class="ui-title" role="heading" aria-level="1"> © Lincy Ellermeijer </h4>
         </footer>
 
     </div>
+
+    <script>
+
+    </script>
 
 </body>
 
