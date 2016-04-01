@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lincy's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <div data-role="page" id="games">
+
+        <header data-role="header">
+            <h1>Lincy's Portfolio</h1>
+            <nav data-role="navbar">
+                <ul>
+                    <li><a href="index.html" data-icon="home">Home</a></li>
+                    <li><a href="projects.html" data-icon="grid">Projects</a></li>
+                    <li><a href="projects.html" data-icon="star">Games</a></li>
+                    <li><a href="about.html" data-icon="info">About</a></li>
+                    <li><a href="contact.html" data-icon="search">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- All the information about the project -->
+
+        <article data-role="content">
+            <ul data-role="listview" data-inset="true" data-theme="portfolio">
+                <h2> Solo projects</h2>
+                <p> I've created three games for the subject Game Mechanics. For each game I had the limited time of 1-2 weeks to think of a good concept, design the game further with the given theme and also do all the coding in Unity3D (C#).</p>
+                <p> I'm still working on developing some more games and elaborating on ideas and designs. I will keep you updated! </p>
+
+                <li data-role="collapsible" data-theme="a" data-content-theme="a" data-iconpos="right" data-shadow="false" data-corners="true">
+                    <h3>Dream</h3>
+                    <!-- title of the subject -->
+                    <ul data-role="listview" data-theme="c" data-shadow="true" data-inset="true" data-corners="true">
+                        <li><img src="pictures/dream.png" alt="projectimage" height="110" width="110" align="left">
+                            <p style="white-space: normal !important;">
+                                <!-- normal text goes here -->
+                                The theme for this game was physics and I went for a smooth 2D platformer. I've used different types of physics. The main one is gravity, quite logical in a platformer. Apart from that I've also used acceleration to make the player and the platforms move more smoothly. Lastly I've used velocity to make the player jump effortles and make wall jumping possible.</p>
+                            <div id="button"><a href="http://lincyellermeijer.weebly.com/dream.html" data-role="button" data-icon="action" align="center">More info about Dream</a></div>
+
+                        </li>
+                    </ul>
+                </li>
+
+                <li data-role="collapsible" data-theme="a" data-content-theme="a" data-iconpos="right" data-shadow="false" data-corners="true">
+                    <h3>The Mad Fool</h3>
+                    <!-- title of the subject -->
+                    <ul data-role="listview" data-theme="c" data-shadow="true" data-inset="true" data-corners="true">
+                        <li><img src="pictures/themadfool.png" alt="projectimage" height="110" width="110" align="left">
+                            <p style="white-space: normal !important;">
+                                <!-- normal text goes here -->
+                                The theme for this game was Economy. I chose a top down approach this time. You play as an animated pixel character. He has to explore the city and perform quests. These are for now very basic. The NPC asks you to get something or go somewhere and if you've completed this quest you will earn EXP. With these experience points you can buy skills. This is the most economic aspect of my game. There is also map exploration, which is also an economic aspect.</p>
+                            <div id="button"><a href="http://lincyellermeijer.weebly.com/the-mad-fool.html" data-role="button" data-icon="action" align="center">More info about The Mad Fool</a></div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li data-role="collapsible" data-theme="a" data-content-theme="a" data-iconpos="right" data-shadow="false" data-corners="true">
+                    <h3>The Mad Fool || : Bossfight!</h3>
+                    <!-- title of the subject -->
+                    <ul data-role="listview" data-theme="c" data-shadow="true" data-inset="true" data-corners="true">
+                        <li><img src="pictures/themadfool2.png" alt="projectimage" height="110" width="110" align="left">
+                            <p style="white-space: normal !important;">
+                                <!-- normal text goes here -->
+                                The final theme was dynamics, the assignment was to make a dynamic bossfight. I really loved the style of my second game and wanted to expand this, so I decided to use this as a base. This game is also a top down 2D (RPG) game. First you have an intro scene. Here you meet someone to help you (Harley). She warns you about the danger ahead and you receive your weapon. If you talk to her again, she asks if you're ready and you go to the next scene (the fight scene).</p>
+                            <p>
+                                As an inspiration for the mechanics of my bossfight I looked at games like: Hero Siege, the Binding of Isaac and Titan Souls. These are all top down 2D games which include bossfights. The idea of the fight scene is that at first you have to fight three waves of different kind of enemies. I think this is very useful for the player to get familiar with the fighting controls. Then the boss spawns!</p>
+                            <div id="button"><a href="http://lincyellermeijer.weebly.com/the-mad-fool-ii--bossfight.html" data-role="button" data-icon="action" align="center">More info about The Mad Fool || : Bossfight! </a></div>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </article>
+
+
+        <footer data-role="footer" data-position="fixed">
+            <h4 class="ui-title" role="heading" aria-level="1"> © Lincy Ellermeijer </h4>
+        </footer>
+
+
+    </div>
+
+</body>
+
+</html>
