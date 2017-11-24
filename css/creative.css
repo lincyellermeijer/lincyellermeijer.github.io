@@ -186,8 +186,8 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: center;
-    background-image: url('../img/header.jpg');
+    background-position: left bottom;
+    background-image: url('../img/lincy.jpg');
     text-align: center;
     color: white;
 }
